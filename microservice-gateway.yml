@@ -16,9 +16,9 @@ spring:
           predicates:
             - Path=/api/v1/impresoras/**
         - id: inventario
-          uri: lb://microservice-inventario
+          uri: http://localhost:8081
           predicates:
-            - Path=/api/v1/materiales/**
+            - Path=/api/v2/materiales/**
   config:
     import: optional:configserver:http://localhost:8888
 
